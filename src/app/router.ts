@@ -7,6 +7,10 @@ import { CounterRoutes } from './example/counter/routes';
 import { FormRoutes } from './example/form/routes';
 import { DashboardRoutes } from './example/dashboard/routes';
 import { store } from '@/app/store';
+// import { IncidentalsRoutes } from './incidentManagement/Incident/routes';
+// import { OverviewRoutes } from './incidentManagement/Overview/routes';
+// import { Overview2Routes } from './incidentManagement/Overview2/routes';
+// import { Overview3Routes } from './incidentManagement/Overview3/routes';
 import { IncidentManagementRoutes } from './incidentManagement/routes';
 import { AtmEngineerManagementRoutes } from './atmEngineerManagement/routes';
 import { StockManagementRoutes } from './stockManagement/routes';
@@ -18,7 +22,21 @@ Vue.use(Meta);
 export const router: VueRouter = new VueRouter({
   mode: 'history',
   base: __dirname,
-  routes: [...AppRoutes, ...HomeRoutes, ...CounterRoutes, ...FormRoutes, ...DashboardRoutes, ...IncidentManagementRoutes, ...AtmEngineerManagementRoutes, ...StockManagementRoutes, ...IncidentRoutes],
+  routes: [
+    ...AppRoutes,
+    ...HomeRoutes,
+    ...CounterRoutes,
+    ...FormRoutes,
+    ...DashboardRoutes,
+    ...IncidentManagementRoutes,
+    //  ...IncidentalsRoutes,
+    // ...OverviewRoutes,
+    // ...Overview2Routes,
+    // ...Overview3Routes,
+    ...AtmEngineerManagementRoutes,
+    ...StockManagementRoutes,
+    ...IncidentRoutes,
+  ],
   scrollBehavior(to: Route, from: Route, savedPosition: { x: number; y: number }) {
     if (to.hash) {
       return { selector: to.hash };
