@@ -28,12 +28,6 @@
     </vue-cookie-consent>
 
     <vue-sidebar>
-      <vue-sidebar-group title="Languages">
-        <vue-sidebar-group-item>
-          <vue-select name="lang" id="lang" :options="languages" @input="localeSwitch" :value="getLocale" />
-        </vue-sidebar-group-item>
-      </vue-sidebar-group>
-
       <vue-sidebar-group title="Navigation">
         <vue-sidebar-group-item to="/">
           <vue-icon-code />
@@ -42,63 +36,73 @@
 
         <vue-sidebar-group-item :to="{ name: 'counter' }">
           <vue-icon-hashtag />
-          VueX Example
+          Dashboard
         </vue-sidebar-group-item>
 
         <vue-sidebar-group-item :to="{ name: 'form' }">
           <vue-icon-hashtag />
-          Form Example
+          Settings
         </vue-sidebar-group-item>
       </vue-sidebar-group>
 
-      <vue-sidebar-group title="Documentation">
-        <vue-sidebar-group-item>
-          <a href="https://vuesion.github.io/docs/en/">
-            <vue-icon-book />
-            Documentation
-          </a>
+      <vue-sidebar-group title="Incident Management">
+        <vue-sidebar-group-item to="/incident-management">
+          <vue-icon-code />
+          Incident Dashboard
         </vue-sidebar-group-item>
 
-        <vue-sidebar-group-item>
-          <a href="/storybook/?path=/story/design-system-design-system--intro">
-            <vue-icon-book />
-            Design System
-          </a>
+        <vue-sidebar-group-item :to="{ name: 'incidentOverview' }">
+          <vue-icon-hashtag />
+          Incident Overview
         </vue-sidebar-group-item>
 
-        <vue-sidebar-group-item>
-          <a href="/storybook/?path=/story/atoms-badge--badge-variants">
-            <vue-icon-puzzle-piece />
-            Components
-          </a>
+        <vue-sidebar-group-item :to="{ name: 'incidentOverview2' }">
+          <vue-icon-hashtag />
+          Incident Overview2
+        </vue-sidebar-group-item>
+
+      <vue-sidebar-group-item :to="{ name: 'incident' }">
+          <vue-icon-hashtag />
+          Incidents
+        </vue-sidebar-group-item>
+
+        <vue-sidebar-group-item :to="{ name: 'incidentOverview2' }">
+          <vue-icon-hashtag />
+          Settings
         </vue-sidebar-group-item>
       </vue-sidebar-group>
 
-      <vue-sidebar-group title="Community">
-        <vue-sidebar-group-item>
-          <a href="https://github.com/vuesion/vuesion" target="_blank" rel="noopener">
-            <vue-icon-github />
-            Github
-          </a>
+      <vue-sidebar-group title="Engineer Management">
+        <vue-sidebar-group-item to="/">
+          <vue-icon-code />
+          Engineer Dashboard
         </vue-sidebar-group-item>
 
-        <vue-sidebar-group-item>
-          <a href="https://discord.gg/59x5cg2" target="_blank" rel="noopener"> Discord </a>
+        <vue-sidebar-group-item :to="{ name: 'counter' }">
+          <vue-icon-hashtag />
+          Incidents
         </vue-sidebar-group-item>
 
-        <vue-sidebar-group-item>
-          <a href="https://slack-vuesion.herokuapp.com/" target="_blank" rel="noopener"> Slack </a>
+        <vue-sidebar-group-item :to="{ name: 'form' }">
+          <vue-icon-hashtag />
+          Settings
+        </vue-sidebar-group-item>
+      </vue-sidebar-group>
+
+      <vue-sidebar-group title="Stock Management">
+        <vue-sidebar-group-item to="/">
+          <vue-icon-code />
+          Stock Dashboard
         </vue-sidebar-group-item>
 
-        <vue-sidebar-group-item>
-          <a href="https://chat.vuejs.org/" target="_blank" rel="noopener"> VueLand </a>
+        <vue-sidebar-group-item :to="{ name: 'counter' }">
+          <vue-icon-hashtag />
+          Add Stock
         </vue-sidebar-group-item>
 
-        <vue-sidebar-group-item>
-          <a href="https://twitter.com/vuesion1" target="_blank" rel="noopener">
-            <vue-icon-twitter-square />
-            Twitter
-          </a>
+        <vue-sidebar-group-item :to="{ name: 'form' }">
+          <vue-icon-hashtag />
+          Settings
         </vue-sidebar-group-item>
       </vue-sidebar-group>
     </vue-sidebar>
